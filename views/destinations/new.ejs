@@ -1,0 +1,112 @@
+<% layout('layouts/boilerplate') %>
+<link rel="stylesheet" href="/stylesheets/previewImages.css" />
+
+<div class="row">
+  <h1 class="text-center">New Destination</h1>
+  <div class="col-md-6 offset-md-3">
+    <form
+      action="/destinations"
+      method="POST"
+      novalidate
+      class="validated-form"
+      enctype="multipart/form-data"
+    >
+      <div class="mb-3">
+        <label class="form-label" for="title">Title</label>
+        <input
+          class="form-control"
+          type="text"
+          id="title"
+          name="destination[title]"
+          required
+          autofocus
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Location</label>
+        <input
+          class="form-control"
+          type="text"
+          id="location"
+          name="destination[location]"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <!-- <div class="mb-3">
+        <label class="form-label" for="imageUrl">Image Url</label>
+        <input
+          class="form-control"
+          type="text"
+          id="imageUrl"
+          name="destination[imageUrl]"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div> -->
+      <div class="mb-3">
+        <label class="form-label" for="price">Average Cost Per Person</label>
+        <div class="input-group">
+          <span class="input-group-text" id="price-label">$</span>
+          <input
+            type="number"
+            class="form-control"
+            id="price"
+            name="destination[price][lower]"
+            placeholder="0.00"
+            aria-describedby="price-label"
+            required
+          />
+          <span class="input-group-text" id="price-label">　-　</span>
+          <input
+            type="number"
+            class="form-control"
+            id="price"
+            name="destination[price][higher]"
+            placeholder="0.00"
+            aria-describedby="price-label"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Description</label>
+        <textarea
+          class="form-control"
+          type="text"
+          id="description"
+          name="destination[description]"
+          required
+        ></textarea>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label custom-file-label"
+          >Upload Images</label
+        >
+        <div class="form-file custom-file">
+          <input
+            class="form-control form-file-input"
+            type="file"
+            id="image"
+            name="image"
+            multiple
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please upload an image.</div>
+        </div>
+
+        <div id="imgPreview" class="d-flex row justify-content-start"></div>
+      </div>
+      <div class="row mb-3 gx-5">
+        <button class="col m-4 btn btn-success">Submit</button>
+        <a class="col m-4 btn btn-secondary" href="/destinations">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/javascripts/addFileNames.js"></script>

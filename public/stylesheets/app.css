@@ -1,0 +1,79 @@
+/* MAPS */
+#cluster-map {
+  width: 100%;
+  height: 500px;
+}
+
+#map {
+  width: 100%;
+  height: 300px;
+}
+
+/* image related */
+#image-thumbnail {
+  width: 100px;
+  height: 75px;
+}
+
+#card-image,
+#card-image img {
+  max-height: 320px;
+}
+
+#carousel-image {
+  max-height: 320px;
+}
+
+/* Show Page */
+#reviewCarousel .carousel-control-next,
+#reviewCarousel .carousel-control-prev /*, .carousel-indicators */ {
+  filter: invert(100%);
+}
+
+/* #reviewCarousel {
+  margin-bottom: 1rem;
+}
+
+.carousel-control-prev {
+  margin-top: 9.5rem;
+}
+
+.carousel-control-next {
+  margin-right: -3rem;
+} */
+
+/* FOOTER */
+.fa-github {
+  color: #ddd;
+  font-size: 1.35rem;
+}
+
+.fa-github:hover {
+  animation: github-animation-in 0.5s ease infinite alternate;
+}
+
+i {
+  font-size: 13px;
+}
+
+.fa-github:not(:hover) {
+  animation: github-animation-out 0.5s ease-out;
+}
+
+@keyframes github-animation-in {
+  from {
+    transform: translateY(0rem) scale(1.2);
+  }
+  to {
+    transform: translateY(-0.3rem) scale(1.2);
+  }
+}
+
+@keyframes github-animation-out {
+  from {
+    transform: translateY(0rem) scale(1.2);
+  }
+  to {
+    transform: translateY(0rem) scale(1);
+  }
+}

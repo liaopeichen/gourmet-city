@@ -1,0 +1,13 @@
+#imgPreview {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+}
+#imgPreview img {
+  width: 100px;
+  height: 75px;
+  margin: 0px 5px 5px 0px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  opacity: 85%;
+}
