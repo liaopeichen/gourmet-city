@@ -43,6 +43,10 @@
 } */
 
 /* FOOTER */
+footer p{
+  margin: 0;
+}
+
 .fa-github {
   color: #ddd;
   font-size: 1.35rem;
